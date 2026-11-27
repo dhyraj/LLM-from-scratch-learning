@@ -1,57 +1,102 @@
-# Summary Writing Instructions
+# Learning Note Instructions
 
-> Goal: create useful chapter summaries while keeping copyright risk low.
+> Goal: create a low-risk, original learning path while using the book as one reference.
 > These are practical guidelines, **not legal advice**.
 
 ## Scope
 
-These rules apply to every chapter summary committed to this public repository. They apply to new summaries and to existing ones that are revised.
+These rules apply to every public note in this repository. The repo is organized by **days and projects**, not by the book's chapters.
 
-The safest default is:
+The safest default:
 
-- **Public repo:** short, selective, transformative notes.
+- **Public notes:** short, selective, original, and transformative.
 - **Private notes:** longer and more detailed, but still not verbatim copies.
 
 ---
 
-## 1. Keep public summaries short and selective
+## 1. Follow our own flow, not the book's outline
 
-For a public chapter summary:
+- Organize notes around questions, experiments, and projects — not the book's table of contents.
+- Do **not** map Day N 1:1 to Chapter N.
+- Use the book as **further reading**, not as the skeleton.
+- Do not reproduce the book's section order, running examples, figures, tables, or code.
+- A shortened chapter is not transformative.
 
-- Aim for **300–700 words** (roughly 1–2 pages).
-- Cover **3–7 key ideas**, not every section.
-- Prefer depth on a few ideas over complete coverage.
-- Add your own explanations, analogies, examples, questions, and connections.
-- Link to the book and state that the notes are independent study notes.
-
-A good test: the summary should help someone **remember and think about** the ideas, not replace reading the chapter.
+A good test: the note should still make sense if the book did not exist. The book is one source, not the script.
 
 ---
 
 ## 2. Write from understanding, not from the page
 
-- Read the chapter, then close the source and write from memory.
-- Use your own sentence structure and your own examples.
+- Read the source, then close it and write from memory.
+- Use your own sentence structure, analogies, and examples.
 - Do **not** paraphrase sentence by sentence.
 - Do **not** just swap synonyms or reorder the author's sentences.
-- Do **not** mirror the book's full outline. Use section numbers only as references.
 - If a sentence feels too close to the source, rewrite it or remove it.
 
-**Transformative** means adding something new: analysis, comparisons, examples, exercises, criticism, or connections. A shortened version of the chapter is not transformative.
+**Transformative** means adding something new: analysis, comparisons, experiments, exercises, criticism, or connections.
 
 ---
 
-## 3. Keep quotation minimal
+## 3. Keep public notes short and selective
 
-- At most **one short quote per chapter**.
+- Aim for **300–900 words** per day.
+- Cover **3–7 key ideas**, not every section.
+- Prefer depth on a few ideas over complete coverage.
+- Add your own explanations, examples, questions, and connections.
+- Link to the book and state that the notes are independent.
+
+Technical days may need more code or examples, but avoid turning the note into a condensed replacement for a chapter.
+
+---
+
+## 4. Use real, reproducible examples
+
+- Prefer actual outputs from a named tool or model. State the tokenizer/model and version.
+- If you show a token ID sequence, generate it with the named tokenizer.
+- If you show code output, run the code and paste the real output.
+- Do not invent model outputs, benchmark numbers, or token IDs.
+- Use public-domain, synthetic, or your own examples. Do not use the book's running examples as your backbone.
+- Keep examples small enough that a reader can rerun them.
+
+Example of a good real example:
+
+> `tiktoken.get_encoding("gpt2").encode("unbelievable")` returns `[403, 6667, 11203, 540]`, which decodes to `["un", "bel", "iev", "able"]`.
+
+---
+
+## 5. Cite public research and check every URL
+
+Cite primary sources:
+
+- papers: arXiv abstract pages, ACL Anthology, JMLR, or official DOI pages;
+- software: official repositories or documentation;
+- model details: the model paper, model card, or official docs.
+
+For each citation, include the title, authors, year, and a stable URL.
+
+Before publishing, open every URL and check:
+
+- it returns HTTP 200,
+- the page title matches the cited work,
+- it is not a paywall, broken PDF, or search-results page,
+- the URL is stable (avoid shorteners and tracking links).
+
+Do not cite a URL you have not checked. If a link is broken or flaky, replace it or remove the claim. Cite specific numbers and non-obvious claims; common knowledge does not need a citation.
+
+---
+
+## 6. Keep quotation minimal
+
+- At most **one short quote per day**.
 - Keep quotes **under 25 words**.
-- Use quotation marks and cite the chapter/page.
-- Prefer explaining the idea in your own words over quoting the wording.
-- Do not reproduce epigraphs, long passages, or the author's distinctive phrasing.
+- Use quotation marks and cite the source.
+- Prefer explaining the idea in your own words.
+- Do not reproduce long passages, epigraphs, or distinctive phrasing.
 
 ---
 
-## 4. Do not reproduce media or long examples
+## 7. Do not reproduce media or long examples
 
 Do **not** copy or closely recreate:
 
@@ -63,16 +108,14 @@ Do **not** copy or closely recreate:
 
 If a figure matters, describe the idea in your own words and cite the page. Draw your own diagram if needed.
 
-Public-domain text may be quoted, but do not copy the book's annotations, framing, or commentary around it.
-
 ---
 
-## 5. Follow the code policy
+## 8. Follow the code policy
 
 - Prefer your own minimal code examples.
 - If you use code from the official [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) repository, follow its **Apache-2.0** license and include attribution.
 - Do not copy code from the book text unless you have verified permission.
-- Keep snippets short and essential to the explanation.
+- Keep snippets short and essential.
 - Never commit the source PDF, extracted text, or page images to this repository.
 
 Example attribution block:
@@ -85,86 +128,72 @@ Licensed under the Apache License 2.0.
 
 ---
 
-## 6. Cite the source and disclaim affiliation
-
-Put a short source note at the top of each summary:
+## 9. Use the day template
 
 ```markdown
-> My notes on Chapter X of *Build a Large Language Model (From Scratch)*
-> by Sebastian Raschka (Manning).
-> Source: https://www.manning.com/books/build-a-large-language-model-from-scratch
->
-> This is an independent study summary, not affiliated with or endorsed by
-> the author or publisher.
-```
+# Day N — Topic
 
-Do not imply that the author or publisher approves of the notes.
+> Independent learning notes. This is not a chapter summary; it is my own path through the ideas.
+> For deeper reading: *Build a Large Language Model (From Scratch)* by Sebastian Raschka (Manning).
+> Not affiliated with or endorsed by the author or publisher.
 
----
+## The question
 
-## 7. Use a low-risk summary template
-
-```markdown
-# Chapter X — Topic
-
-> My notes on Chapter X of *Build a Large Language Model (From Scratch)*.
-> Source: [book link]
+What am I trying to understand?
 
 ## The idea in one paragraph
 
-Explain the chapter's central idea in your own words.
+Explain it in my own words.
 
-## Key ideas
+## A real example
 
-- 3–7 takeaways, each in your own words.
+A reproducible example with actual output.
 
-## My example
+## Try it yourself
 
-A new, small example that is not copied from the book.
+A small exercise the reader can run.
 
-## What surprised me / what I would question
+## What surprised me / limits
 
 Original analysis, limitations, or open questions.
 
-## One question to test myself
-
-A question that requires understanding, not memorization.
-
 ## Further reading
 
-Links to the book, official code, or related material.
+- Paper or official documentation links.
+- Book link for deeper reading.
 ```
 
 ---
 
-## 8. Pre-publish checklist
+## 10. Pre-publish checklist
 
-Before committing a summary, check:
+Before committing a note, check:
 
-- [ ] Is the summary short and selective?
+- [ ] Does this follow my own day/project flow rather than the book's chapter order?
+- [ ] Is it 300–900 words and selective?
 - [ ] Is every sentence in my own words?
-- [ ] Did I avoid close paraphrase?
-- [ ] Are quotes limited to one short, cited quote?
+- [ ] Are the examples real, reproducible, and not copied from the book?
 - [ ] Did I avoid reproducing figures, tables, screenshots, and long code?
-- [ ] Did I use my own examples?
-- [ ] Is there original analysis or commentary?
-- [ ] Is the source cited and the affiliation disclaimer present?
+- [ ] Are quotes limited to one short, cited quote?
+- [ ] Are the paper URLs valid and primary sources?
+- [ ] Are the citations accurate — title, authors, year?
 - [ ] Is code properly licensed and attributed?
-- [ ] Could this replace buying the book? If yes, cut more.
+- [ ] Is the source cited and the affiliation disclaimer present?
+- [ ] Could this replace the book? If yes, cut more.
 - [ ] Would I be comfortable showing this to the author or publisher?
 
 ---
 
-## 9. If in doubt
+## 11. If in doubt
 
 - Keep detailed notes private.
-- Publish only a short, high-level summary.
+- Publish only a short, high-level note.
 - Ask the author or publisher for permission.
 - Consult an intellectual-property lawyer.
 - If the publisher requests removal, comply promptly.
 
 ---
 
-## Note on existing summaries
+## Note on the old chapter drafts
 
-The existing chapter summaries are more detailed than this policy recommends. Before adding more chapters, review them against the checklist above. In particular, the Chapter 2 summary is long and code-heavy; if the goal is low risk, shorten it or keep the detailed version private.
+The earlier chapter-based summaries were retired from the current tree because they were too detailed and closely followed the book. They may still exist in git history. If the repository is public and that matters, make the repository private or rewrite history. Do not reintroduce chapter-by-chapter summaries.
