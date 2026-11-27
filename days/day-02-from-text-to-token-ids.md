@@ -10,12 +10,13 @@ How does raw text become a sequence of integers that a model can process?
 
 ## The pipeline
 
-```text
-raw text
-  → tokens
-  → token IDs
-  → training windows
-  → embeddings
+```mermaid
+graph LR
+    A[Raw text] --> B[BPE tokenizer]
+    B --> C[Tokens]
+    C --> D[Token IDs]
+    D --> E[Training windows]
+    E --> F[Embeddings]
 ```
 
 This day covers the first two steps: splitting text into tokens and mapping those tokens to IDs.

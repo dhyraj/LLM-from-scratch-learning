@@ -17,6 +17,15 @@ Training usually has two stages:
 1. **Pretraining** on raw, unlabeled text. The model learns general language patterns by next-token prediction. The result is a **foundation model**.
 2. **Finetuning** on labeled or instruction data. The model is adapted for a task such as classification, summarization, translation, or chat.
 
+```mermaid
+graph LR
+    A[Raw text] --> B[Pretraining]
+    B --> C[Foundation model]
+    C --> D[Finetuning]
+    D --> E[Classification model]
+    D --> F[Instruction or chat model]
+```
+
 The transformer architecture comes from [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017). GPT-3 is a decoder-only model with 175B parameters ([Brown et al., 2020](https://arxiv.org/abs/2005.14165)).
 
 ## A real next-token example

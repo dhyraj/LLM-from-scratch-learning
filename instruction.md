@@ -106,7 +106,7 @@ Do **not** copy or closely recreate:
 - long code listings,
 - the book's datasets or worked examples.
 
-If a figure matters, describe the idea in your own words and cite the page. Draw your own diagram if needed.
+If a figure matters, describe the idea in your own words and cite the page. Draw your own diagram if needed. For original diagrams, use a fenced `mermaid` block; keep the syntax simple and GitHub-compatible, and do not recreate the book's figures.
 
 ---
 

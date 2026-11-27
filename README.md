@@ -10,10 +10,20 @@ An independent, project-driven path through LLM fundamentals. These notes are in
 | 2 | From Text to Token IDs | [Day 2 — From Text to Token IDs](days/day-02-from-text-to-token-ids.md) |
 | 3 | From Token IDs to Input Embeddings | [Day 3 — From Token IDs to Input Embeddings](days/day-03-from-token-ids-to-input-embeddings.md) |
 
+## Learning path
+
+```mermaid
+graph LR
+    D1[Day 1: Introduction to LLMs] --> D2[Day 2: Text to Token IDs]
+    D2 --> D3[Day 3: Input Embeddings]
+    D3 -.-> D4[Next: Attention]
+```
+
 ## How this repo works
 
 - Each day is a short, self-contained note.
 - Examples are real and reproducible, and public papers are linked and checked.
+- Flow diagrams use Mermaid and render directly on GitHub.
 - The book is a reference for deeper reading, not the structure of the notes.
 - See [instruction.md](instruction.md) for the writing, citation, and URL-checking policy.
 

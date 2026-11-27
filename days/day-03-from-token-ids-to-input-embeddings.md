@@ -118,14 +118,14 @@ Many modern LLMs use rotary position embeddings (RoPE), a relative scheme introd
 
 ## The full input pipeline
 
-```text
-text
-  → tokenizer
-  → token IDs
-  → input/target windows
-  → token embeddings
-  → + positional embeddings
-  → transformer
+```mermaid
+graph TD
+    A[Text] --> B[Tokenizer]
+    B --> C[Token IDs]
+    C --> D[Input and target windows]
+    D --> E[Token embeddings]
+    E --> F[Add positional embeddings]
+    F --> G[Transformer]
 ```
 
 ## Try it yourself
