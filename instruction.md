@@ -149,10 +149,6 @@ Explain it in my own words.
 
 A reproducible example with actual output.
 
-## Try it yourself
-
-A small exercise the reader can run.
-
 ## What surprised me / limits
 
 Original analysis, limitations, or open questions.

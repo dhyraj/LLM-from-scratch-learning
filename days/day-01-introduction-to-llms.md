@@ -95,10 +95,6 @@ Start with a bigram or trigram model, then replace it with a tiny transformer. T
 4. attention,
 5. a training loop.
 
-## Try it yourself
-
-Change the corpus or the context length in the trigram example. What happens to the distribution? Then sample a sentence from the counts instead of always taking the most likely word.
-
 ## Further reading
 
 - Vaswani et al., 2017 — [Attention Is All You Need](https://arxiv.org/abs/1706.03762)

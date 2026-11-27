@@ -128,13 +128,6 @@ graph TD
     F --> G[Transformer]
 ```
 
-## Try it yourself
-
-1. Tokenize a sentence with `tiktoken` and build input–target pairs with `max_length=4`, `stride=1`.
-2. Implement the embedding lookup with a small matrix.
-3. Add a position vector to each token vector and check the shapes.
-4. Explain why the target must be shifted one position to the right.
-
 ## Further reading
 
 - Bengio et al., 2003 — [A Neural Probabilistic Language Model](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)

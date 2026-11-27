@@ -115,13 +115,6 @@ print(ids)
 
 The `allowed_special` argument tells `tiktoken` to treat the marker as a special token instead of raising an error. Special tokens are part of the vocabulary, but they are not ordinary text. Follow the tokenizer’s documentation rather than inventing your own markers.
 
-## Try it yourself
-
-1. Tokenize a sentence you wrote with `gpt2` and `cl100k_base`.
-2. Decode both ID sequences and confirm that you get the original text back.
-3. Find a word that splits into different pieces in the two tokenizers.
-4. Try an emoji or a non-English word and see how byte-level BPE handles it.
-
 ## Further reading
 
 - Sennrich et al., 2016 — [Neural Machine Translation of Rare Words with Subword Units](https://aclanthology.org/P16-1162/)
